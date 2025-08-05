@@ -114,22 +114,22 @@ base folder:
 │   │   ├── packed
 │   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
 │   │   └── [ai370|m1u|opi5|x7ti]_results.csv
-│   ├── throughput
-│   │   ├── distant
-│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   ├── guided
-│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   ├── loose
-│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   ├── os
-│   │   │   └── [ai370|m1u|opi5|x7ti]_os_R*.txt
-│   │   ├── packed
-│   └── └── └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│   └── throughput
+│       ├── distant
+│       │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│       ├── guided
+│       │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│       ├── loose
+│       │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│       ├── os
+│       │   └── [ai370|m1u|opi5|x7ti]_os_R*.txt
+│       └── packed
+│           └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
 ├── misc
 │   ├── frequencies
 │   │   └── [ai370|x7ti]_freqs.txt
-│   ├── profilings
-│   └── └── [ai370|m1u|opi5|x7ti]_dvbs2_profiling.txt
+│   └── profilings
+│       └── [ai370|m1u|opi5|x7ti]_dvbs2_profiling.txt
 ├── output
 │   ├── 1_postpro
 │   │   ├── distant
@@ -144,12 +144,12 @@ base folder:
 │   │   ├── os
 │   │   │   ├── [ai370|m1u|opi5|x7ti]_scheds.csv
 │   │   │   └── [ai370|m1u|opi5|x7ti]_scheds_reduced.csv
-│   │   ├── packed
-│   │   │   ├── [ai370|m1u|opi5|x7ti]_scheds.csv
-│   │   └── └── [ai370|m1u|opi5|x7ti]_scheds_reduced.csv
-│   ├── 2_postpro_with_conso
-│   │   │   ├── [ai370|m1u|opi5|x7ti]_scheds.csv
-│   └── └── └── all_scheds.csv
+│   │   └── packed
+│   │       ├── [ai370|m1u|opi5|x7ti]_scheds.csv
+│   │       └── [ai370|m1u|opi5|x7ti]_scheds_reduced.csv
+│   └── 2_postpro_with_conso
+│       ├── [ai370|m1u|opi5|x7ti]_scheds.csv
+│       └── all_scheds.csv
 ├── scripts
 │   ├── common
 │   │   ├── funcs.py
