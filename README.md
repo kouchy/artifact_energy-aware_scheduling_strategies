@@ -83,7 +83,7 @@ from GitHub using `git clone`. You will find the following organization in the
 base folder:
 
 ```
-├── input
+├── inputs
 │   ├── conso_rapl
 │   │   ├── distant
 │   │   │   └── [ai370|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
@@ -130,7 +130,7 @@ base folder:
 │   │   └── [ai370|x7ti]_freqs.txt
 │   └── profilings
 │       └── [ai370|m1u|opi5|x7ti]_dvbs2_profiling.txt
-├── output
+├── outputs
 │   ├── 1_postpro
 │   │   ├── distant
 │   │   │   ├── [ai370|m1u|opi5|x7ti]_scheds.csv
@@ -163,12 +163,12 @@ base folder:
 ```
 
 Here is a description of the main folders:
-- `input`: Schedules and the raw measurements.
+- `inputs`: Schedules and the raw measurements.
 - `misc`: Miscellaneous additional data, unused by the scripts, like profilings 
   and frequencies.
-- `output`: Post processed data from `input` and `scripts`.
+- `outputs`: Post processed data from `inputs` and `scripts`.
 - `scripts`: Python scripts used to run the code and to transform the raw data 
-  (from the `input` folder) into post processed data (`output` folder).
+  (from the `inputs` folder) into post processed data (`outputs` folder).
 
 Sub-folders are used for the different scheduling strategies and pinning 
 policies:
@@ -183,8 +183,8 @@ policies:
 Scripts are expected to be run from the base folder, and in the lexicographic
 order. For instance, to post-process the raw data again, one may do:
 ```bash
-./scripts/2_parse_results.py # will produce the contents of 'output/1_postpro'
-./scripts/3_parse_conso_results.py # will produce the contents of 'output/2_postpro_with_conso'
+./scripts/2_parse_results.py # will produce the contents of 'outputs/1_postpro'
+./scripts/3_parse_conso_results.py # will produce the contents of 'outputs/2_postpro_with_conso'
 ```
 
 ## 4. Reproducibility of Experiments
@@ -194,12 +194,12 @@ article “Energy-Aware Scheduling Strategies for Partially-Replicable Task Chai
 on Heterogeneous Processors”.
 
 Experiments are conducted in two parts: 10 runs of 1 minute to gather the 
-throughput, and one run of 30 seconds to gather the power measurements.
+throughput, and one run of 1 min 30 seconds to gather the power measurements.
 
 ### 4.1 Compiling the DVB-S2 Transceiver
 
-The DVB-S2 has been compiled independently (Ubuntu 24.04) on each target as 
-follow:
+The DVB-S2 has been compiled independently (Ubuntu 24.04) on each platform as 
+follow (`[platform_tag]` is a placeholder see Section 4.3):
 ```bash
 sudo apt install git cmake hwloc libhwloc-dev
 git clone https://github.com/aff3ct/dvbs2.git
@@ -210,18 +210,17 @@ cd build_[platform_tag]
 cmake .. -G"Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -funroll-loops -march=native" -DSPU_LINK_HWLOC=ON -DDVBS2_LINK_UHD=OFF
 make -j16
 ```
-And, this artifact has been unzipped and copied inside the cloned `dvbs2` 
-folder like as follow:
+And, this artifact has been unzipped and copied inside the previously cloned 
+`dvbs2` folder like as follow:
 ```bash
 cp -r artifact_energy-aware_scheduling_strategies $SOMEWHERE/dvbs2/
 ```
 
-### 4.2 Generating DVB-S2 Tx Input IQs
+### 4.2 Generating DVB-S2 Rx Input IQs
 
-To re-run the experiments, the `out_tx.bin` file will be missing. It has not 
-been added to this repository as it is an heavy binary file containing IQ
-samples (500 MB to 1 GB). To regenerate this file, one may run the following 
-command:
+To re-run the experiments, the `out_tx.bin` file is missing. It has not been 
+added to this repository as it is an heavy binary file containing IQ samples 
+(500 MB to 1 GB). To regenerate this file, one may run the following command:
 ```bash
 ./bin/dvbs2_tx --sim-stats --rad-type USER_BIN --rad-tx-file-path out_tx.bin -F 8 --src-type USER --src-path ../conf/src/K_14232.src --mod-cod QPSK-S_8/9 --tx-time-limit 1000
 ```
@@ -233,25 +232,26 @@ of the DVB-S2 transceiver.
 
 Four different platforms have been tested, identified by a tag:
 - `opi5`: Orange Pi 5 Plus with 4 ARM Cortex-A76 cores (big) @ 2.4 GHz and 4 ARM 
-  Cortex-A55 cores (little)
+  Cortex-A55 cores (little).
 - `m1u`: Apple Mac Studio 2022 with 16 Apple Firestorm cores (big) @ 3.2 GHz and 
-  4 Apple Icestorm cores (little) @ 2 GHz
+  4 Apple Icestorm cores (little) @ 2 GHz.
 - `ai370`: Minisforum EliteMini AI370 with 4 AMD Zen 5 cores (big) @ 2 GHz and 8 
-  AMD Zen 5c cores (little) @ 2 GHz
+  AMD Zen 5c cores (little) @ 2 GHz.
 - `x7ti`: Minisforum AtomMan X7 Ti with 6 Intel Redwood Cove p-cores (big) @ 
   2.3 GHz, 8 Intel Crestmont e-cores (little) @ 1.8 GHz, and 2 Intel Crestmont 
-  LPe-cores @ 1.0 GHz left unused
+  LPe-cores @ 1.0 GHz left unused.
 
 ### 4.4 Python Script Configuration
 
 Paths and options are defined in the `scripts/common/params/py` file. One may
-change the `user`. Normally, other paths should be the same and left unmodified.
+want to change the `user`. Normally, other paths should be the same and left 
+unmodified.
 
 In the `scripts/1_generic_run_scheds.py` file, the path of the IQs should be
-updated (line 44-46) according to the location of this file (see Section 4.2).
-In our experiments, we ran the DVB-S2 on a cluster environment and, to avoid
-extra network traffic, we placed the `out_tx.bin` file on the local SSD 
-(`/scratch/[user]/dvbs2` folder).
+updated (line 44-46) according to the real location of this file (see 
+Section 4.2). In our experiments, we ran the DVB-S2 on a cluster environment 
+and, to avoid extra network traffic, we moved the `out_tx.bin` file on the 
+local SSD (`/scratch/[user]/dvbs2` folder).
 
 The Python script comes with the two following command line parameters:
 ```
@@ -281,17 +281,17 @@ cd artifact_energy-aware_scheduling_strategies
 ./scripts/1_generic_run_scheds.py -N [platform_tag] -S distant
 ./scripts/1_generic_run_scheds.py -N [platform_tag] -S guided
 ./scripts/1_generic_run_scheds.py -N [platform_tag] -S packed
+./scripts/1_generic_run_scheds.py -N [platform_tag] -S loose
 
 # this requires a small modification in the code, explained bellow
-./scripts/1_generic_run_scheds.py -N [platform_tag] -S loose
 ./scripts/1_generic_run_scheds.py -N [platform_tag] -S os
 ```
 
-The previous scripts are saving the raw files in the `input/throughput` folder.
+The previous scripts are saving the raw files in the `inputs/throughput` folder.
 
-`loose` pinning policy and `os` scheduling strategy does not expect any pinning
-from the application. To do this, you need to modify the DVB-S2 receiver code.
-Open the `dvbs2_root/src/mains/RX/main_sched.cpp` file and at line 20 do:
+`os` scheduling strategy does not expect any pinning from the application. To 
+achieve this, you need to modify the DVB-S2 receiver code. Open the 
+`dvbs2_root/src/mains/RX/main_sched.cpp` file and at line 20 do:
 ```cpp
 // constexpr bool thread_pinning = true; // <- comment this line
 constexpr bool thread_pinning = false; // <- add this line below
@@ -316,8 +316,8 @@ following command line:
 powerstat -cDHRf 2 30
 ```
 The previous command was run directly on the platforms that were executing the
-DVB-S2 receiver. In order to limit the probe effect, only one sample every two 
+DVB-S2 receiver. In order to limit the probe effect, only one sample every 2 
 seconds is generated. This is done 30 times so it takes 1 minutes in total.
 
 For both type of measurements, we manually saved the energy files into the 
-`input/conso_socket` and `input/conso_rapl` folders.
+`inputs/conso_socket` and `inputs/conso_rapl` folders.
