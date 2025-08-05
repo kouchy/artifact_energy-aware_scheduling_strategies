@@ -1,0 +1,21 @@
+{
+"platform": "opi5",
+"resources": {
+  "p-core": {
+    "node-list": ["core4-7"],
+    "cluster-size": 2,
+    "smt": 1
+  },
+  "e-core": {
+    "node-list": ["core0-3"],
+    "cluster-size": 4,
+    "smt": 1
+  }
+},
+"scheduler_name": "OTAC_big",
+"date": "2025-07-18",
+"schedule": [
+    { "tasks": 16, "threads": 1, "core-type": "p-core", "pinning-policy": "loose" },
+    { "tasks": 7, "threads": 1, "core-type": "p-core", "pinning-policy": "loose" }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+"platform": "ai370",
+"resources": {
+  "p-core": {
+    "node-list": ["core0-3"],
+    "cluster-size": 1,
+    "smt": 2
+  },
+  "e-core": {
+    "node-list": ["core4-11"],
+    "cluster-size": 1,
+    "smt": 2
+  }
+},
+"scheduler_name": "OTAC_big",
+"date": "2025-07-18",
+"schedule": [
+    { "tasks": 5, "threads": 1, "core-type": "p-core", "pinning-policy": "packed" },
+    { "tasks": 7, "threads": 1, "core-type": "p-core", "pinning-policy": "packed" },
+    { "tasks": 6, "threads": 1, "core-type": "p-core", "pinning-policy": "packed" },
+    { "tasks": 5, "threads": 1, "core-type": "p-core", "pinning-policy": "packed" }
+  ]
+}

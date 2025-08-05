@@ -1,0 +1,9 @@
+# az5-a890m-1
+
+profiling:
+- PU L#0/#0 (big): 4370 MHz
+- PU L#8/#4 (little): 3300 MHz
+
+Real HeRAD, R = (4, 8)
+- PU L#0/#0 (big): 4370 MHz
+- PU L#8/#4 (little): 1680-3300 MHz

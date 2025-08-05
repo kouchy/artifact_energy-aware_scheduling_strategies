@@ -1,0 +1,23 @@
+{
+"platform": "x7ti",
+"resources": {
+  "p-core": {
+    "node-list": ["core0-5"],
+    "cluster-size": 1,
+    "smt": 2
+  },
+  "e-core": {
+    "node-list": ["core6-13"],
+    "cluster-size": 4,
+    "smt": 1
+  }
+},
+"scheduler_name": "OTAC_big",
+"date": "2025-07-23",
+"schedule": [
+    { "tasks": 8, "threads": 1, "core-type": "p-core", "pinning-policy": "guided" },
+    { "tasks": 7, "threads": 1, "core-type": "p-core", "pinning-policy": "guided" },
+    { "tasks": 4, "threads": 3, "core-type": "p-core", "pinning-policy": "guided" },
+    { "tasks": 4, "threads": 1, "core-type": "p-core", "pinning-policy": "guided" }
+  ]
+}

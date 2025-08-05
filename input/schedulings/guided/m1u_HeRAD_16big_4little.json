@@ -1,0 +1,26 @@
+{
+"platform": "m1u",
+"resources": {
+  "p-core": {
+    "node-list": ["core2-9", "core12-19"],
+    "cluster-size": 4,
+    "smt": 1
+  },
+  "e-core": {
+    "node-list": ["core0-1", "core10-11"],
+    "cluster-size": 2,
+    "smt": 1
+  }
+},
+"scheduler_name": "HeRAD",
+"date": "2025-07-18",
+"schedule": [
+    { "tasks": 3, "threads": 1, "core-type": "e-core", "pinning-policy": "guided" },
+    { "tasks": 1, "threads": 1, "core-type": "e-core", "pinning-policy": "guided" },
+    { "tasks": 1, "threads": 1, "core-type": "e-core", "pinning-policy": "guided" },
+    { "tasks": 1, "threads": 1, "core-type": "p-core", "pinning-policy": "guided" },
+    { "tasks": 6, "threads": 1, "core-type": "p-core", "pinning-policy": "guided" },
+    { "tasks": 7, "threads": 6, "core-type": "p-core", "pinning-policy": "guided" },
+    { "tasks": 4, "threads": 1, "core-type": "e-core", "pinning-policy": "guided" }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+"platform": "opi5",
+"resources": {
+  "p-core": {
+    "node-list": ["core4-7"],
+    "cluster-size": 2,
+    "smt": 1
+  },
+  "e-core": {
+    "node-list": ["core0-3"],
+    "cluster-size": 4,
+    "smt": 1
+  }
+},
+"scheduler_name": "2CATAC",
+"date": "2025-07-18",
+"schedule": [
+    { "tasks": 15, "threads": 1, "core-type": "p-core", "pinning-policy": "packed" },
+    { "tasks": 3, "threads": 2, "core-type": "e-core", "pinning-policy": "packed" },
+    { "tasks": 5, "threads": 1, "core-type": "p-core", "pinning-policy": "packed" }
+  ]
+}

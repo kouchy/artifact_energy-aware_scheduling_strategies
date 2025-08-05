@@ -1,0 +1,24 @@
+{
+"platform": "ai370",
+"resources": {
+  "p-core": {
+    "node-list": ["core0-3"],
+    "cluster-size": 1,
+    "smt": 2
+  },
+  "e-core": {
+    "node-list": ["core4-11"],
+    "cluster-size": 1,
+    "smt": 2
+  }
+},
+"scheduler_name": "FERTAC",
+"date": "2025-07-18",
+"schedule": [
+    { "tasks": 5, "threads": 1, "core-type": "e-core", "pinning-policy": "guided" },
+    { "tasks": 1, "threads": 1, "core-type": "p-core", "pinning-policy": "guided" },
+    { "tasks": 9, "threads": 1, "core-type": "e-core", "pinning-policy": "guided" },
+    { "tasks": 4, "threads": 3, "core-type": "e-core", "pinning-policy": "guided" },
+    { "tasks": 4, "threads": 1, "core-type": "e-core", "pinning-policy": "guided" }
+  ]
+}

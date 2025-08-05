@@ -1,0 +1,9 @@
+# x7ti
+
+profiling:
+- PU L#0/#0 (big): 4600-4800 MHz
+- PU L#12/#12 (little): 3600-3800 MHz
+
+Real HeRAD, R = (6, 8)
+- PU L#2/#1 (big): 3700-4600 MHz
+- PU L#12/#12 (little): 3300 MHz

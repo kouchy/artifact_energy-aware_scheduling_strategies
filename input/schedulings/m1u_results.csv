@@ -1,0 +1,11 @@
+RNG seed,algorithm,number of tasks,big resources,little resources,time max,stateless ratio,period,big used,little used,number of stages,tasks per stage,resources per stage,types of resources,load per stage
+0,HeRAD,22,16,4,0,0,95095,8,4,7,3|1|1|1|6|7|4,1|1|1|1|1|6|1,Little|Little|Little|Big|Big|Big|Little,89115|89262|88004|95095|56961|87605.5|53147,
+0,2CATAC,22,16,4,0,0,95095,8,4,7,3|1|1|1|9|5|3,1|1|1|1|1|6|1,Little|Little|Little|Big|Big|Big|Little,89115|89262|88004|95095|73495|88062.7|6712,
+0,FERTAC,22,16,4,0,0,95095,9,4,8,3|1|1|1|2|7|5|3,1|1|1|1|1|1|6|1,Little|Little|Little|Big|Little|Big|Big|Big,89115|89262|88004|95095|18091|64733|88062.7|2320,
+0,OTAC_big,22,16,4,0,0,95095,10,0,5,5|1|9|5|3,1|1|1|6|1,Big|Big|Big|Big|Big,86212|95095|73495|88062.7|2320,
+0,OTAC_little,22,16,4,0,0,635531,0,4,3,14|5|4,1|2|1,Little|Little|Little,635531|633422|53147,
+0,HeRAD,22,8,2,0,0,101820,8,1,5,5|1|9|4|4,1|1|1|5|1,Big|Big|Big|Big|Little,86212|95095|73495|101820|53147,
+0,2CATAC,22,8,2,0,0,101820,8,1,5,5|2|8|4|4,1|1|1|5|1,Big|Big|Big|Big|Little,86212|100166|68424|101820|53147,
+0,FERTAC,22,8,2,0,0,126794,8,2,6,3|1|2|9|5|3,1|1|1|1|5|1,Little|Little|Big|Big|Big|Big,89115|89262|126794|73495|105675|2320,
+0,OTAC_big,22,8,2,0,0,127275,8,0,5,5|3|7|4|4,1|1|1|4|1,Big|Big|Big|Big|Big,86212|103857|64733|127275|21597,
+0,OTAC_little,22,8,2,0,0,1.12514e+06,0,2,2,16|7,1|1,Little|Little,1.12514e+06|830377,
