@@ -1,4 +1,4 @@
-# az5-a890m-1
+# ai370
 
 profiling:
 - PU L#0/#0 (big): 4370 MHz

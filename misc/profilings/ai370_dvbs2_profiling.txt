@@ -1,6 +1,6 @@
 # ./bin/dvbs2_rx --sim-stats --src-type USER --src-path ../conf/src/K_14232.src --rad-type USER_BIN --rad-rx-file-path /scratch/cassagnea/dvbs2/out_tx.bin -F 16 --mod-cod QPSK-S_8/9 --dec-implem NMS --dec-ite 10 --dec-simd INTER --snk-path /dev/null --no-wl-phases -P 10000
 
-// az5-a890m (AMD Ryzen AI 9 HX 370, 4 x Zen 5 + 8 x Zen 5c)
+// ai370 (AMD Ryzen AI 9 HX 370, 4 x Zen 5 + 8 x Zen 5c)
 Big    = {   216.34, 276.59, 156.78, 661.51, 711.32,3262.07, 135.43, 132.80, 758.94, 242.51,  72.63,  85.84, 377.61, 312.61,  94.48,2491.19,  66.49, 523.83,3959.02, 953.36,  27.56,  31.13,  41.94 }
 Little = {   227.15, 338.24, 206.94, 904.76, 935.73,4307.54, 179.24, 162.96,1037.21, 266.73,  76.66, 111.10, 499.74, 316.31, 123.33,3281.49,  80.22, 670.54,5220.41,1273.42,  35.28,  31.11,  43.79 }
 
