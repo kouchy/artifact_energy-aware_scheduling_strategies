@@ -86,137 +86,70 @@ base folder:
 ├── input
 │   ├── conso_rapl
 │   │   ├── distant
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│   │   │   └── [ai370|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
 │   │   ├── guided
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│   │   │   └── [ai370|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
 │   │   ├── os
-│   │   │   ├── ai370_os_R*.txt
-│   │   │   └── x7ti_os_R*.txt
+│   │   │   └── [ai370|x7ti]_os_R*.txt
 │   │   ├── packed
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   ├── ai370_idle.txt
-│   │   └── x7ti_idle.txt
+│   │   │   └── [ai370|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│   │   └── [ai370|x7ti]_idle.txt
 │   ├── conso_socket
 │   │   ├── distant
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── m1u_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── opi5_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
 │   │   ├── guided
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── m1u_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── opi5_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
 │   │   ├── os
-│   │   │   ├── ai370_os_R*.txt
-│   │   │   ├── m1u_os_R*.txt
-│   │   │   ├── opi5_os_R*.txt
-│   │   │   └── x7ti_os_R*.txt
+│   │   │   └── [ai370|m1u|opi5|x7ti]_os_R*.txt
 │   │   ├── packed
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── m1u_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── opi5_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   ├── ai370_idle.txt
-│   │   ├── m1u_idle.txt
-│   │   ├── opi5_idle.txt
-│   │   └── x7ti_idle.txt
+│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│   │   └── [ai370|m1u|opi5|x7ti]_idle.txt
 │   ├── schedulings
 │   │   ├── distant
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   │   ├── m1u_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   │   ├── opi5_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
+│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
 │   │   ├── guided
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   │   ├── m1u_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   │   ├── opi5_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
+│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
 │   │   ├── loose
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   │   ├── m1u_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   │   ├── opi5_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
+│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
 │   │   ├── packed
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   │   ├── m1u_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   │   ├── opi5_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
-│   │   ├── ai370_results.csv
-│   │   ├── m1u_results.csv
-│   │   ├── opi5_results.csv
-│   │   └── x7ti_results.csv
+│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.json
+│   │   └── [ai370|m1u|opi5|x7ti]_results.csv
 │   ├── throughput
 │   │   ├── distant
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── m1u_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── opi5_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
 │   │   ├── guided
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── m1u_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── opi5_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
 │   │   ├── loose
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── m1u_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── opi5_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│   │   │   └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
 │   │   ├── os
-│   │   │   ├── ai370_os_R*.txt
-│   │   │   ├── m1u_os_R*.txt
-│   │   │   ├── opi5_os_R*.txt
-│   │   │   └── x7ti_os_R*.txt
+│   │   │   └── [ai370|m1u|opi5|x7ti]_os_R*.txt
 │   │   ├── packed
-│   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── m1u_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   │   │   ├── opi5_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
-│   └── └── └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
+│   └── └── └── [ai370|m1u|opi5|x7ti]_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
 ├── misc
 │   ├── frequencies
-│   │   ├── ai370_freqs.txt
-│   │   └── x7ti_freqs.txt
-│   │── profilings
-│   │   ├── ai370_dvbs2_profiling.txt
-│   │   ├── m1u_dvbs2_profiling.txt
-│   │   ├── opi5_dvbs2_profiling.txt
-│   └── └── x7ti_dvbs2_profiling.txt
+│   │   └── [ai370|x7ti]_freqs.txt
+│   ├── profilings
+│   └── └── [ai370|m1u|opi5|x7ti]_dvbs2_profiling.txt
 ├── output
 │   ├── 1_postpro
 │   │   ├── distant
-│   │   │   ├── ai370_scheds*.csv
-│   │   │   ├── m1u_scheds*.csv
-│   │   │   ├── opi5_scheds*.csv
-│   │   │   └── x7ti_scheds*.csv
+│   │   │   ├── [ai370|m1u|opi5|x7ti]_scheds.csv
+│   │   │   └── [ai370|m1u|opi5|x7ti]_scheds_reduced.csv
 │   │   ├── guided
-│   │   │   ├── ai370_scheds*.csv
-│   │   │   ├── m1u_scheds*.csv
-│   │   │   ├── opi5_scheds*.csv
-│   │   │   └── x7ti_scheds*.csv
+│   │   │   ├── [ai370|m1u|opi5|x7ti]_scheds.csv
+│   │   │   └── [ai370|m1u|opi5|x7ti]_scheds_reduced.csv
 │   │   ├── loose
-│   │   │   ├── ai370_scheds*.csv
-│   │   │   ├── m1u_scheds*.csv
-│   │   │   ├── opi5_scheds*.csv
-│   │   │   └── x7ti_scheds*.csv
+│   │   │   ├── [ai370|m1u|opi5|x7ti]_scheds.csv
+│   │   │   └── [ai370|m1u|opi5|x7ti]_scheds_reduced.csv
 │   │   ├── os
-│   │   │   ├── ai370_scheds*.csv
-│   │   │   ├── m1u_scheds*.csv
-│   │   │   ├── opi5_scheds*.csv
-│   │   │   └── x7ti_scheds*.csv
+│   │   │   ├── [ai370|m1u|opi5|x7ti]_scheds.csv
+│   │   │   └── [ai370|m1u|opi5|x7ti]_scheds_reduced.csv
 │   │   ├── packed
-│   │   │   ├── ai370_scheds*.csv
-│   │   │   ├── m1u_scheds*.csv
-│   │   │   ├── opi5_scheds*.csv
-│   │   └── └── x7ti_scheds*.csv
+│   │   │   ├── [ai370|m1u|opi5|x7ti]_scheds.csv
+│   │   └── └── [ai370|m1u|opi5|x7ti]_scheds_reduced.csv
 │   ├── 2_postpro_with_conso
-│   │   │   ├── ai370_scheds.csv
-│   │   │   ├── all_scheds.csv
-│   │   │   ├── m1u_scheds.csv
-│   │   │   ├── opi5_scheds.csv
-│   └── └── └── x7ti_scheds.csv
+│   │   │   ├── [ai370|m1u|opi5|x7ti]_scheds.csv
+│   └── └── └── all_scheds.csv
 ├── scripts
 │   ├── common
 │   │   ├── funcs.py
