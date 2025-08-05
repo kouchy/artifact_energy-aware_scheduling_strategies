@@ -12,20 +12,22 @@ commit XXXXXXXX).
 - **Article's title**: Energy-Aware Scheduling Strategies for 
   Partially-Replicable Task Chains on Heterogeneous Processors
 - **Authors' names and affiliations**: 
-    * Yacine Idouar - LIP6, Sorbonne University, CNRS, UMR7606, Paris, France
-    * Adrien Cassagne - LIP6, Sorbonne University, CNRS, UMR7606, Paris, France
-    * Laércio L. Pilla - University of Bordeaux, CNRS, Inria, LaBRI, UMR5800, 
-      Talence, France
-    * Julien Sopena - LIP6, Sorbonne University, CNRS, UMR7606, Paris, France
-    * Manuel Bouyer - LIP6, Sorbonne University, CNRS, UMR7606, Paris, France
-    * Diane Orhan - University of Bordeaux, CNRS, Inria, LaBRI, UMR5800, 
-      Talence, France
-    * Lionel Lacassagne - LIP6, Sorbonne University, CNRS, UMR7606, Paris, 
-      France
-    * Dimitri Galayko - LIP6, Sorbonne University, CNRS, UMR7606, Paris, France
-    * Denis Barthou - Bordeaux INP, Talence, France
-    * Christophe Jégo - University Bordeaux, CNRS, Bordeaux INP, IMS, UMR5218, 
-      Talence, France
+    * Yacine Idouar - *LIP6, Sorbonne University, CNRS, UMR7606, Paris, France*
+    * Adrien Cassagne - *LIP6, Sorbonne University, CNRS, UMR7606, Paris, 
+      France*
+    * Laércio L. Pilla - *University of Bordeaux, CNRS, Inria, LaBRI, UMR5800, 
+      Talence, France*
+    * Julien Sopena - *LIP6, Sorbonne University, CNRS, UMR7606, Paris, France*
+    * Manuel Bouyer - *LIP6, Sorbonne University, CNRS, UMR7606, Paris, France*
+    * Diane Orhan - *University of Bordeaux, CNRS, Inria, LaBRI, UMR5800, 
+      Talence, France*
+    * Lionel Lacassagne - *LIP6, Sorbonne University, CNRS, UMR7606, Paris, 
+      France*
+    * Dimitri Galayko - *LIP6, Sorbonne University, CNRS, UMR7606, Paris, 
+      France*
+    * Denis Barthou - *Bordeaux INP, Talence, France*
+    * Christophe Jégo - *University Bordeaux, CNRS, Bordeaux INP, IMS, UMR5218, 
+      Talence, France*
 - **Abstract**: The arrival of heterogeneous (or hybrid) multicore architectures 
   has brought new performance trade-offs for applications, and efficiency 
   opportunities to systems. They have also increased the challenges related to 
@@ -91,7 +93,7 @@ base folder:
 │   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
 │   │   ├── os
 │   │   │   ├── ai370_os_R*.txt
-│   │   │   └── x7tios_R*.txt
+│   │   │   └── x7ti_os_R*.txt
 │   │   ├── packed
 │   │   │   ├── ai370_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
 │   │   │   └── x7ti_[2CATAC|FERTAC|HeRAD|OTAC]_*.txt
@@ -228,22 +230,22 @@ base folder:
 ```
 
 Here is a description of the main folders:
-- `input`: Schedules and the raw measurements
+- `input`: Schedules and the raw measurements.
 - `misc`: Miscellaneous additional data, unused by the scripts, like profilings 
-  and frequencies
-- `output`: Post processed data from `input` and `scripts`
+  and frequencies.
+- `output`: Post processed data from `input` and `scripts`.
 - `scripts`: Python scripts used to run the code and to transform the raw data 
-  (from the `input` folder) into post processed data (`output` folder)
+  (from the `input` folder) into post processed data (`output` folder).
 
 Sub-folders are used for the different scheduling strategies and pinning 
 policies:
 - `distant`: Contains OTAC, FERTAC, 2CATAC and HeRAD results for `distant` 
-  policy
-- `packed`: Contains OTAC, FERTAC, 2CATAC and HeRAD results for `packed` policy
-- `loose`: Contains OTAC, FERTAC, 2CATAC and HeRAD results for `loose` policy
-- `guided`: Contains OTAC, FERTAC, 2CATAC and HeRAD results for `guided` policy
+  policy.
+- `packed`: Contains OTAC, FERTAC, 2CATAC and HeRAD results for `packed` policy.
+- `loose`: Contains OTAC, FERTAC, 2CATAC and HeRAD results for `loose` policy.
+- `guided`: Contains OTAC, FERTAC, 2CATAC and HeRAD results for `guided` policy.
 - `os`: Contains the OS scheduling results with different values of R (the 
-  number of replications)
+  number of replications).
 
 Scripts are expected to be run from the base folder, and in the lexicographic
 order. For instance, to post-process the raw data again, one may do:
