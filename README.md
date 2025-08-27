@@ -9,8 +9,8 @@ commit XXXXXXXX).
 
 > [!NOTE]
 > This repository uses schedules as inputs. If you seek for generating schedules
-> you may have a look in the following dedicated repository: [AMP scheduling 
-> v2.0](https://doi.org/10.5281/zenodo.16964647). 
+> you may have a look into the following dedicated repository: [AMP scheduling 
+> v2.0](https://doi.org/10.5281/zenodo.16964647).
 
 ## 1. Artifact Identification
 
