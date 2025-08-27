@@ -7,6 +7,11 @@ throughput and energy consumption measurements over the open source SDR DVB-S2
 receiver ([https://github.com/aff3ct/dvbs2](https://github.com/aff3ct/dvbs2), 
 commit XXXXXXXX).
 
+> [!NOTE]
+> This repository uses schedules as inputs. If you seek for generating schedules
+> you may have a look in the following dedicated repository: [AMP scheduling 
+> v2.0](https://doi.org/10.5281/zenodo.16964647). 
+
 ## 1. Artifact Identification
 
 - **Article's title**: Energy-Aware Scheduling Strategies for 
@@ -70,7 +75,7 @@ This code has been tested on systems with the following basic characteristics:
 - **Input datasets**: All the measurements files are already available in the
   artifact. The script to reproduce them is also available in the repository.
 - **Output datasets**: All the preprocessed data is also already available in 
-  the artifact too.
+  the artifact.
 
 ## 3. Artifact Installation and Deployment Process
 
