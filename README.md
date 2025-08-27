@@ -3,9 +3,8 @@
 This repository contains the dataset used for the “Energy-Aware Scheduling 
 Strategies for Partially-Replicable Task Chains on Heterogeneous Processors”
 article, submitted to the Elsevier Parallel Computing journal. It concerns 
-throughput and energy consumption measurements over the open source SDR DVB-S2 
-receiver ([https://github.com/aff3ct/dvbs2](https://github.com/aff3ct/dvbs2), 
-commit XXXXXXXX).
+throughput and energy consumption measurements over the open source [SDR DVB-S2 
+receiver v1.0.0](https://doi.org/10.5281/zenodo.16966824).
 
 > [!NOTE]
 > This repository uses schedules as inputs. If you seek for generating schedules
@@ -204,11 +203,12 @@ throughput, and one run of 1 min 30 seconds to gather the power measurements.
 ### 4.1 Compiling the DVB-S2 Transceiver
 
 The DVB-S2 has been compiled independently (Ubuntu 24.04) on each platform as 
-follow (`[platform_tag]` is a placeholder see Section 4.3):
+follow (`[platform_tag]` is a placeholder, see Section 4.3):
 ```bash
 sudo apt install git cmake hwloc libhwloc-dev
 git clone https://github.com/aff3ct/dvbs2.git
-git checkout XXXXXX
+cd dvbs2/
+git checkout v1.0.0
 git submodule update --init --recursive
 mkdir build_[platform_tag]
 cd build_[platform_tag]
@@ -230,7 +230,7 @@ added to this repository as it is an heavy binary file containing IQ samples
 ./bin/dvbs2_tx --sim-stats --rad-type USER_BIN --rad-tx-file-path out_tx.bin -F 8 --src-type USER --src-path ../conf/src/K_14232.src --mod-cod QPSK-S_8/9 --tx-time-limit 1000
 ```
 This is detailed in the 
-[README file](https://github.com/aff3ct/dvbs2?tab=readme-ov-file#testing-tx-and-rx-separately) 
+[README file](https://github.com/aff3ct/dvbs2/tree/v1.0.0?tab=readme-ov-file#testing-tx-and-rx-separately) 
 of the DVB-S2 transceiver.
 
 ### 4.3 Experimental Platforms
@@ -310,7 +310,8 @@ make -j4
 ### 4.5.2 Energy Consumption
 
 For the socket energy consumption, we used a preliminary version of the Dalek's 
-measurement platform detailed in this article: [DOI DALEK](https://doi/dalek). 
+measurement platform detailed in the following article: [Dalek 
+DOI](https://doi.org/10.48550/arXiv.2508.10481). 
 We plan to fully open this hardware in the future. For now, we are still working 
 on it and it is not fully ready.
 
