@@ -296,7 +296,8 @@ The previous scripts are saving the raw files in the `inputs/throughput` folder.
 
 `os` scheduling strategy does not expect any pinning from the application. To 
 achieve this, you need to modify the DVB-S2 receiver code. Open the 
-`dvbs2_root/src/mains/RX/main_sched.cpp` file and at line 20 do:
+[`dvbs2_root/src/mains/RX/main_sched.cpp`](https://github.com/aff3ct/dvbs2/blob/v1.0.0/src/mains/RX/main_sched.cpp#L20)
+file and at line 20 do:
 ```cpp
 // constexpr bool thread_pinning = true; // <- comment this line
 constexpr bool thread_pinning = false; // <- add this line below
